@@ -5,7 +5,7 @@ import casoWeb from './assets/caso-web.png';
 export const CONTACT = {
   whatsapp: '5491154100845', // sin + ni espacios, para wa.me
   email: 'santiagobosca@gmail.com',
-  linkedin: 'https://www.linkedin.com/in/santiagoboscan',
+  linkedin: 'https://www.linkedin.com/in/santiago-boscan',
   portfolio: 'https://santiagobosca.vercel.app',
 };
 
