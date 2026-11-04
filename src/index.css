@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+/* El modo oscuro se activa con la clase .dark en <html> (la pone el botón del menú). */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Colores como variables: cambian solos entre modo claro y oscuro. */
+:root {
+  --surface: #ffffff;
+  --paper: #f8fafc;
+  --ink: #0f172a;
+  --muted: #475569;
+  --line: #e2e8f0;
+  --brand: #0f766e;
+  --brand-hover: #115e59;
+  --on-brand: #ffffff;
+  --brand-soft: #ccfbf1;
+  --brand-strong: #115e59; /* texto de acento: etiquetas y números */
+  --night: #0f172a; /* fondo oscuro fijo: contacto, pie y recuadro de IA */
+  --danger: #b91c1c;
+  color-scheme: light;
+}
+
+.dark {
+  --surface: #0b1120;
+  --paper: #111a2e;
+  --ink: #e2e8f0;
+  --muted: #94a3b8;
+  --line: #1f2a40;
+  --brand: #2dd4bf;
+  --brand-hover: #5eead4;
+  --on-brand: #042f2e;
+  --brand-soft: #123c3a;
+  --brand-strong: #5eead4;
+  --night: #050914;
+  --danger: #f87171;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+
+  --color-surface: var(--surface);
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-brand: var(--brand);
+  --color-brand-hover: var(--brand-hover);
+  --color-on-brand: var(--on-brand);
+  --color-brand-soft: var(--brand-soft);
+  --color-brand-strong: var(--brand-strong);
+  --color-night: var(--night);
+  --color-danger: var(--danger);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-surface font-sans text-ink antialiased transition-colors duration-300;
+  }
+  section[id] {
+    scroll-margin-top: 4.5rem;
+  }
+}

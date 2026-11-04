@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es-AR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Santiago Bosca · Sistemas de gestión a medida</title>
+    <meta
+      name="description"
+      content="Desarrollo sistemas de gestión a medida para pymes, estudios e inmobiliarias: tus planillas, vencimientos, documentos y cobros en un solo lugar, desde la compu o el celular."
+    />
+    <meta property="og:title" content="Santiago Bosca · Sistemas de gestión a medida" />
+    <meta
+      property="og:description"
+      content="Un sistema hecho para cómo trabaja tu negocio. Casos reales en estudios jurídicos, inmobiliarias e industria."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_AR" />
+    <script>
+      // Aplica el tema y el idioma guardados antes de dibujar, para que no parpadee.
+      (function () {
+        var d = document.documentElement;
+        var theme, lang;
+        try {
+          theme = localStorage.getItem('theme');
+          lang = localStorage.getItem('lang');
+        } catch (e) {}
+        if (!theme) theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        if (theme === 'dark') d.classList.add('dark');
+        var fromUrl = new URLSearchParams(location.search).get('lang');
+        if (fromUrl === 'es' || fromUrl === 'en') lang = fromUrl;
+        if (!lang) lang = /^es/i.test(navigator.language || '') ? 'es' : 'en';
+        d.lang = lang === 'es' ? 'es-AR' : 'en';
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

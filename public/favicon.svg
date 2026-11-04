@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <!-- Fondo circular negro -->
+  <circle cx="128" cy="128" r="120" fill="#000"></circle>
+
+  <!-- Texto SB en blanco, más fino -->
+  <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Inter, ui-sans-serif, system-ui, Segoe UI, Roboto, Arial" font-weight="600" font-size="160" fill="#fff" letter-spacing="-4">
+    SB
+  </text>
+</svg>
